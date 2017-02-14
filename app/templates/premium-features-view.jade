@@ -1,0 +1,49 @@
+extends /templates/base
+
+mixin box(title, i)
+  img(src=i)
+
+  h3= title
+  p.
+    You get lots of game
+    Its soo good
+    you like lots
+
+block content
+  .container-fluid#jumbotron
+    .container
+      .row
+        //TODO: Size these correctly
+        .col-xs-10
+          //h1(data-i18n="about.main_title")
+          h1 Premium
+
+  
+  .container-fluid
+    br
+    .row
+      .col-sm-6.col-sm-offset-3
+        button.btn.btn-success.btn-illustrated.btn-block.btn-lg.buy Buy Now
+    br
+    .row.feature-row
+      .col-sm-5
+        +box("30 Heros", "https://files.slack.com/files-tmb/T3A7R00SU-F44B4PDR7-8c7aca94e5/novposes_1024.png")
+
+      .col-sm-5.col-sm-offset-1
+        +box("Cute Pets", "https://files.slack.com/files-tmb/T3A7R00SU-F45408Z4L-b92de261f5/collect-command-control_480.png")
+
+    .row.feature-row
+      .col-sm-5
+        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F451RMC8J-edd78777da/aug12-new_web-game_dev_islands_copy_720.png")
+      .col-sm-5.col-sm-offset-1
+        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F45NC5LGP-a503651e4b/gems_720.png")
+
+    .row.feature-row
+      .col-sm-5
+        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F44B4PDR7-8c7aca94e5/novposes_1024.png")
+      .col-sm-5.col-sm-offset-1
+        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F44VDTAHH-622b16e775/artyeti_480.png")
+
+    .row
+      .col-sm-6.col-sm-offset-3
+        button.btn.btn-success.btn-illustrated.btn-block.btn-lg.buy Buy Now

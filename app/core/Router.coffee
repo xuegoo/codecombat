@@ -20,6 +20,7 @@ module.exports = class CocoRouter extends Backbone.Router
       return @routeDirectly('HomeView', [])
 
     'about': go('AboutView')
+    'features': go('PremiumFeaturesView')
 
     'account': go('account/MainAccountView')
     'account/settings': go('account/AccountSettingsRootView')
