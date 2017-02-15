@@ -1,80 +1,75 @@
 extends /templates/base-flat
 
 block content
-  #jumbotron(style="overflow: hidden")
+  #jumbotron.top-jumbo
     img#bannerImg(src="/images/pages/features/banner.png")
     .container#bannerContainer
       .row
         .col-xs-12
-          h1(style="margin-top:200px" data-i18n="premium_features.get")
+          h1.top-offset-200(data-i18n="premium_features.get")
           h1(data-i18n="premium_features.codecombat")
           h1(data-i18n="premium_features.premium")
 
   .container
     .row
       br
-      .col-sm-12(style="text-align:center")
-        h3 Become a Master Coder by subscribing today!
+      .col-sm-12.center-text
+        h3(data-i18n="premium_features.master_coder")
       .col-sm-2.col-sm-offset-5
         br
-        button.btn.btn-forest.btn-block.btn-lg.buy Subscribe Now
+        button.btn.btn-forest.btn-block.btn-lg.buy(data-i18n="premium_features.subscribe_now")
 
   .container
-    .row.feature-row(style="margin-bottom:72px")
+    .row.feature-row.bottom-offset-72
       .col-sm-6
         .feature-text
-          p.
-            Get access to 13 super-charged subscriber-only heroes heroes! Harness the unstoppable power of Okar Stompfoot, the deadly precision of Naria of the Leaf, or summon "adorable" skeletons with Nalfar Cryptor.
-          p.
-            Premium Warriors unlock stunning martial skills like Warcry, Stomp, and Hurl Enemy. Or, play as a Ranger, using stealth and bows, throwing knives, traps! Try your skill as a true coding Wizard, and unleash a powerful array of Primordial, Necromantic or Elemental magic!
+          p(data-i18n="premium_features.hero_blurb_1", data-i18n-options={heroesCount: view.i18nData.heroesCount})
+          p(data-i18n="premium_features.hero_blurb_2")
       .col-sm-5.col-sm-offset-1
         .void.void-right.burgandy
           .void-text.void-text-right
-            h2 Exciting new heroes!
+            h2(data-i18n="premium_features.hero_caption")
           img.void-image.void-image-right#heroes-void-image(src="/images/pages/features/heroes.png")
 
     .row.feature-row
       .col-sm-5
         .void.void-left.navy
-          .void-text.void-text-left(style="width:265px")
-            h2 Adopt pets to accompany your hero!
-          img.void-image.void-image-left#pets-void-image(src="/images/pages/features/collect_command.png" style="right:265px")
+          .void-text.void-text-left.force-width-265
+            h2(data-i18n="premium_features.pet_caption") 
+          img.void-image.void-image-left.force-right-265#pets-void-image(src="/images/pages/features/collect_command.png")
       .col-sm-6.col-sm-offset-1
         .feature-text
-          p.
-            Pets aren't just adorable companions, they also provide unique functionality and methods. The Baby Griffin can fly over obstacles while helping the hero, the Wolf Pup can fetch potions, and the Cougar can speak!
-          p.
-            Collect all the pets to discover their unique abilities!
+          p(data-i18n="premium_features.pet_blurb_1")
+          p(data-i18n="premium_features.pet_blurb_2")
 
     .row.feature-row
       .col-sm-6
         .feature-text
-          p.
-            Learn game scripting and build new levels to share with your friends! Place the items you want, write code for unit logic and behavior, and see if your friends can beat the level!
+          p(data-i18n="premium_features.game_dev_blurb")
       .col-sm-5.col-sm-offset-1
         .void.void-right.forest
           .void-text.void-text-right
-            h2 Design your own games to challenge your friends!
+            h2(data-i18n="premium_features.game_dev_caption")
           img.void-image.void-image-right#game-dev-void-image(src="/images/pages/features/game_web_dev.png")
 
     .row
       .col-sm-8.col-sm-offset-2
-        h3(style="text-align:center") Everything you get in CodeCombat Premium
+        h3.center-text(data-i18n="premium_features.everything_in_premium")
         ul
-          li Receive 3,500 gems per month to buy gear, pets, and heroes
-          li Access 300+ more levels to explore
-          li Unlock exclusive heroes, include Ranger and Wizard classes
-          li Make and share levels and games with friends
-          li Build websites and interactive apps
-          li Equip premium-only items for your Rangers and Wizards as well as Pets!
-          li Get Premium support to help you get unstuck
-          li Create private clans to invite your friends and compete on a group leaderboard
+          li(data-i18n="premium_features.list_gems")
+          li(data-i18n="premium_features.list_levels" data-i18n-options={levelsCount:view.i18nData.levelsCount})
+          li(data-i18n="premium_features.list_heroes")
+          li(data-i18n="premium_features.list_game_dev")
+          li(data-i18n="premium_features.list_web_dev")
+          li(data-i18n="premium_features.list_items")
+          li(data-i18n="premium_features.list_support")
+          li(data-i18n="premium_features.list_clans")
 
   .container
     .row
       .col-sm-2.col-sm-offset-5
         br
-        button.btn.btn-forest.btn-block.btn-lg.buy Subscribe Now
+        button.btn.btn-forest.btn-block.btn-lg.buy(data-i18n="premium_features.subscribe_now")
 
-  #jumbotron(style="background-image: url('/images/pages/home/character_jumbotron.png'); margin-top:50px; margin-bottom: -75px")
-    div(style="background: linear-gradient(to top, rgba(0,0,0,0) 12.5%, rgba(255, 255, 255, 1));width:100%;height:100%;left:0;top:0")
+  #jumbotron.bottom-jumbo
+    #bottom-gradient-blend

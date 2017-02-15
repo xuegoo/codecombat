@@ -550,7 +550,7 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     tip_programming_not_about_computers: "Информационные технологии – это настолько же про компьютеры, как астрономия – про телескопы. - Эдсгер Дейкстра"
     tip_mulan: "Верь, что сможешь, тогда получится. - Мулан"
 
-#  play_game_dev_level:
+  play_game_dev_level:
     created_by: "Создано {{name}}"
     restart: "Переиграть уровень"
     play: "Начать уровень"
@@ -1280,7 +1280,7 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
 #    change_hero: "Change Hero"
 #    web_dev_language_transition: "All classes program in HTML / JavaScript for this course.  Classes that have been using Python will start with extra JavaScript intro levels to ease the transition.  Classes that are already using JavaScript will skip the intro levels."
 
-#  teacher:
+  teacher:
 #    assigning_course: "Assigning course"
 #    course_solution: "Course Solution"
 #    level_overview_solutions: "Level Overview and Solutions"
