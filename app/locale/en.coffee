@@ -677,6 +677,11 @@
     subscribe_prepaid: "Click Subscribe to use prepaid code"
     using_prepaid: "Using prepaid code for monthly subscription"
 
+  premium_features:
+    get: "Get"
+    codecombat: "CodeCombat"
+    premium: "Premium"
+
   choose_hero:
     choose_hero: "Choose Your Hero"
     programming_language: "Programming Language"

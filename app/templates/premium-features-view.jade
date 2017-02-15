@@ -1,49 +1,80 @@
-extends /templates/base
-
-mixin box(title, i)
-  img(src=i)
-
-  h3= title
-  p.
-    You get lots of game
-    Its soo good
-    you like lots
+extends /templates/base-flat
 
 block content
-  .container-fluid#jumbotron
-    .container
+  #jumbotron(style="overflow: hidden")
+    img#bannerImg(src="/images/pages/features/banner.png")
+    .container#bannerContainer
       .row
-        //TODO: Size these correctly
-        .col-xs-10
-          //h1(data-i18n="about.main_title")
-          h1 Premium
+        .col-xs-12
+          h1(style="margin-top:200px" data-i18n="premium_features.get")
+          h1(data-i18n="premium_features.codecombat")
+          h1(data-i18n="premium_features.premium")
 
-  
-  .container-fluid
-    br
+  .container
     .row
-      .col-sm-6.col-sm-offset-3
-        button.btn.btn-success.btn-illustrated.btn-block.btn-lg.buy Buy Now
-    br
+      br
+      .col-sm-12(style="text-align:center")
+        h3 Become a Master Coder by subscribing today!
+      .col-sm-2.col-sm-offset-5
+        br
+        button.btn.btn-forest.btn-block.btn-lg.buy Subscribe Now
+
+  .container
+    .row.feature-row(style="margin-bottom:72px")
+      .col-sm-6
+        .feature-text
+          p.
+            Get access to 13 super-charged subscriber-only heroes heroes! Harness the unstoppable power of Okar Stompfoot, the deadly precision of Naria of the Leaf, or summon "adorable" skeletons with Nalfar Cryptor.
+          p.
+            Premium Warriors unlock stunning martial skills like Warcry, Stomp, and Hurl Enemy. Or, play as a Ranger, using stealth and bows, throwing knives, traps! Try your skill as a true coding Wizard, and unleash a powerful array of Primordial, Necromantic or Elemental magic!
+      .col-sm-5.col-sm-offset-1
+        .void.void-right.burgandy
+          .void-text.void-text-right
+            h2 Exciting new heroes!
+          img.void-image.void-image-right#heroes-void-image(src="/images/pages/features/heroes.png")
+
     .row.feature-row
       .col-sm-5
-        +box("30 Heros", "https://files.slack.com/files-tmb/T3A7R00SU-F44B4PDR7-8c7aca94e5/novposes_1024.png")
-
-      .col-sm-5.col-sm-offset-1
-        +box("Cute Pets", "https://files.slack.com/files-tmb/T3A7R00SU-F45408Z4L-b92de261f5/collect-command-control_480.png")
+        .void.void-left.navy
+          .void-text.void-text-left(style="width:265px")
+            h2 Adopt pets to accompany your hero!
+          img.void-image.void-image-left#pets-void-image(src="/images/pages/features/collect_command.png" style="right:265px")
+      .col-sm-6.col-sm-offset-1
+        .feature-text
+          p.
+            Pets aren't just adorable companions, they also provide unique functionality and methods. The Baby Griffin can fly over obstacles while helping the hero, the Wolf Pup can fetch potions, and the Cougar can speak!
+          p.
+            Collect all the pets to discover their unique abilities!
 
     .row.feature-row
-      .col-sm-5
-        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F451RMC8J-edd78777da/aug12-new_web-game_dev_islands_copy_720.png")
+      .col-sm-6
+        .feature-text
+          p.
+            Learn game scripting and build new levels to share with your friends! Place the items you want, write code for unit logic and behavior, and see if your friends can beat the level!
       .col-sm-5.col-sm-offset-1
-        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F45NC5LGP-a503651e4b/gems_720.png")
-
-    .row.feature-row
-      .col-sm-5
-        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F44B4PDR7-8c7aca94e5/novposes_1024.png")
-      .col-sm-5.col-sm-offset-1
-        +box("Stuff", "https://files.slack.com/files-tmb/T3A7R00SU-F44VDTAHH-622b16e775/artyeti_480.png")
+        .void.void-right.forest
+          .void-text.void-text-right
+            h2 Design your own games to challenge your friends!
+          img.void-image.void-image-right#game-dev-void-image(src="/images/pages/features/game_web_dev.png")
 
     .row
-      .col-sm-6.col-sm-offset-3
-        button.btn.btn-success.btn-illustrated.btn-block.btn-lg.buy Buy Now
+      .col-sm-8.col-sm-offset-2
+        h3(style="text-align:center") Everything you get in CodeCombat Premium
+        ul
+          li Receive 3,500 gems per month to buy gear, pets, and heroes
+          li Access 300+ more levels to explore
+          li Unlock exclusive heroes, include Ranger and Wizard classes
+          li Make and share levels and games with friends
+          li Build websites and interactive apps
+          li Equip premium-only items for your Rangers and Wizards as well as Pets!
+          li Get Premium support to help you get unstuck
+          li Create private clans to invite your friends and compete on a group leaderboard
+
+  .container
+    .row
+      .col-sm-2.col-sm-offset-5
+        br
+        button.btn.btn-forest.btn-block.btn-lg.buy Subscribe Now
+
+  #jumbotron(style="background-image: url('/images/pages/home/character_jumbotron.png'); margin-top:50px; margin-bottom: -75px")
+    div(style="background: linear-gradient(to top, rgba(0,0,0,0) 12.5%, rgba(255, 255, 255, 1));width:100%;height:100%;left:0;top:0")
